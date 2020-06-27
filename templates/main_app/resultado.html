@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Resultado de la deuda {% endblock %}
+
+
+{% block content %}
+
+<p>Estamos a Dia: {{fecha}}</p>
+
+<div class="col-md-12 col-auto">
+  <div class="card">
+    <div class="card-header">
+      La Tasa de Interés Máxima Convencional
+    </div>  
+    <div class="card-header">
+      {{ valorTmc }}%
+    </div>       
+  </div>
+</div>
+
+
+{% endblock content %}
+

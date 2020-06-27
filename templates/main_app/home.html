@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Calculo TMC {% endblock %}
+
+
+{% block content %}
+<h3 class="text-center">{{ mensaje }}</h3>
+<div class="container row justify-content-center">
+  <div class="col-md-3">
+    <form action="/resultado/" method="POST">{% csrf_token %}
+      <div>
+        <label class="col-form-label col-form-label-sm text-center text-light bg-dark" for="inputSmall">&nbsp;Monto UF&nbsp;</label>
+        <input class="form-control form-control-sm" type="number" placeholder="Monto UF"  name="uf">
+      </div>
+      <div>
+        <label class="col-form-label col-form-label-sm text-center text-light bg-dark" for="inputSmall">&nbsp;Inicio Plazo de Credito&nbsp;</label>
+        <input class="form-control form-control-sm" type="date" placeholder="Inicio Plazo de Credito"  name="dateIni">
+      </div>
+      <div>
+        <label class="col-form-label col-form-label-sm text-center text-light bg-dark" for="inputSmall">&nbsp;Fin Plazo de Credito&nbsp;</label>
+        <input class="form-control form-control-sm" type="date" placeholder="Fin Plazo de Credito"  name="dateFin">
+      </div>
+      <div>
+        <label class="col-form-label col-form-label-sm text-center text-light bg-dark" for="inputSmall">&nbsp;Fecha del TMC&nbsp;</label>
+        <input class="form-control form-control-sm" type="date" placeholder="Fecha del TMC"  name="tmc">
+      </div>      
+      <input type="submit" value="Buscar">      
+    </form>    
+  </div>
+</div>
+{% endblock content %}
+
